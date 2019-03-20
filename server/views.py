@@ -13,7 +13,7 @@ from orm.models import Statuses_AutoCall
 
 
 HEADERS = {"Access-Control-Allow-Origin": "*", "Access-Control-Allow-Methods": "POST", "Access-Control-Allow-Headers": "Content-Type"}
-TOKEN = "46e933b8-30aa-4383-9f4a-9fc58b60ae23"
+TOKEN = "TOKEN"
 
 ANSWERS_POSITIVE = ['да', 'приеду', 'согласен', 'соглаcна']
 ANSWERS_NEGATIVE = ['нет', 'не приеду']
