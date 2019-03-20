@@ -1,0 +1,66 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>ffeb0a1e-ef4d-4406-aa7b-53fd13e2d58b</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>runserver.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>AsteriskAMIClient</Name>
+    <RootNamespace>AsteriskAMIClient</RootNamespace>
+    <InterpreterId>Global|PythonCore|3.6-32</InterpreterId>
+    <SccProjectName>&lt;Project Location In Database&gt;</SccProjectName>
+    <SccProvider>Mercurial Source Control Package</SccProvider>
+    <SccAuxPath>&lt;Source Control Database&gt;</SccAuxPath>
+    <SccLocalPath>&lt;Local Binding Root of Project&gt;</SccLocalPath>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <CommandLineArguments>-port 2060  -ip 192.168.7.220 -sql_host itts -sql_base aa_test4 -sql_user sa -sql_pass Aa123456</CommandLineArguments>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="server\conf.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="runserver.py" />
+    <Compile Include="orm\base.py" />
+    <Compile Include="orm\fields.py" />
+    <Compile Include="orm\models.py" />
+    <Compile Include="server\views.py" />
+    <Compile Include="server\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.6-32" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="server\" />
+    <Folder Include="orm\" />
+    <Folder Include="server\static\" />
+    <Folder Include="server\static\content\" />
+    <Folder Include="server\static\fonts\" />
+    <Folder Include="server\static\scripts\" />
+    <Folder Include="server\templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="server\templates\index.html" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>

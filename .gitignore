@@ -3,3 +3,8 @@ etc/new 2.txt
 etc/backup_2018nov29_144112.tar
 etc/old/*
 common/conf.py
+etc/sphinx/*
+etc/nero/*
+etc/*.wav
+etc/*.alaw
+server/conf.py
